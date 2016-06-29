@@ -5,4 +5,4 @@ function comments(state = [], action){
   return state
 }
 
-export defaults comments
+export default comments
