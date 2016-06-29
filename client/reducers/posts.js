@@ -5,4 +5,4 @@ function posts(state = [], action){
   return state
 }
 
-export defaults posts
+export default posts
