@@ -1,14 +1,19 @@
 import React from 'react'
 import Photo from './Photo'
-//import Comments from './Comments'
+import Comments from './Comments'
 
 const Single = React.createClass(
   {
     render() {
+      // index of the post
+      const i = this.props.posts.findIndex((post) => post.code === this.props.params.postId)
+      // the post
+      const post = this.props.posts[i]
+      console.log(post)
       return (
       <div className='single-photo'>
-
-        <h2>Single</h2>
+        <Photo i={i} post={post} {...this.props} />
+        <Comments />
       </div>
     )}
   }
